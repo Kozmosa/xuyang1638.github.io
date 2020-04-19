@@ -33,7 +33,7 @@
         -->
 
   <meta charset="UTF-8">
-  <title>P5706 刷题记录 - Kozumi Blog</title>
+  <title>myfriends - Kozumi Blog</title>
 
   <!-- Favicons -->
   <link rel="icon shortcut" type="image/ico" href="/images/favicon.png">
@@ -63,7 +63,7 @@
   <!-- The Open Graph protocol -->
   <meta property="og:url" content="https://xuyang1638.github.io">
   <meta property="og:type" content="blog">
-  <meta property="og:title" content="P5706 刷题记录 - Kozumi Blog | Kozumi Blog">
+  <meta property="og:title" content="myfriends - Kozumi Blog | Kozumi Blog">
   <meta property="og:image" content="/images/favicon.png" />
   
 
@@ -387,6 +387,7 @@
     <div id="barba-wrapper">
       <div class="barba-container"  data-namespace="post">
         
+  
 
 
 
@@ -404,17 +405,13 @@
   <div class="theme-post__background mdui-color-theme"></div>
   <div class="theme-post__header mdui-color-theme">
     <div class="theme-post__header__title mdui-text-truncate">
-      P5706 刷题记录
+      myfriends
     </div>
     <div class="theme-spacer"></div>
     <div class="theme-post__header__actions mdui-valign">
       <div>
         <span>编写时间：</span>
-        <span style="float: right">Apr 13, 2020</span>
-        
-        <br>
-          <span>最后修改时间：</span>
-          <span>Apr 19, 2020</span>
+        <span style="float: right">Apr 19, 2020</span>
         
       </div>
       
@@ -432,7 +429,7 @@
 
       
         <li class="mdui-menu-item">
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https://xuyang1638.github.io//2020/04/13/P5706%20%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/index.html" target="_blank" class="mdui-ripple">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://xuyang1638.github.io//myfriends/index.html" target="_blank" class="mdui-ripple">
                 分享到Facebook
             </a>
         </li>
@@ -440,7 +437,7 @@
 
       
         <li class="mdui-menu-item">
-            <a href="https://plus.google.com/share?url=https://xuyang1638.github.io//2020/04/13/P5706%20%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/index.html" target="_blank" class="mdui-ripple">
+            <a href="https://plus.google.com/share?url=https://xuyang1638.github.io//myfriends/index.html" target="_blank" class="mdui-ripple">
                 分享到Google+
             </a>
         </li>
@@ -448,7 +445,7 @@
 
       
         <li class="mdui-menu-item">
-            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://xuyang1638.github.io//2020/04/13/P5706%20%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/index.html&title=P5706 刷题记录" target="_blank" class="mdui-ripple">
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://xuyang1638.github.io//myfriends/index.html&title=myfriends" target="_blank" class="mdui-ripple">
                 分享到Linkedin
             </a>
         </li>
@@ -460,7 +457,7 @@
 
       
         <li class="mdui-menu-item">
-            <a href="https://twitter.com/intent/tweet?text=P5706 刷题记录&url=https://xuyang1638.github.io//2020/04/13/P5706%20%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/index.html&via=Kozumi" target="_blank" class="mdui-ripple">
+            <a href="https://twitter.com/intent/tweet?text=myfriends&url=https://xuyang1638.github.io//myfriends/index.html&via=Kozumi" target="_blank" class="mdui-ripple">
                 分享到Twitter
             </a>
         </li>
@@ -494,27 +491,7 @@
           </section>
         
         <section class="mdui-typo theme-post__card__content">
-          <p>题目地址：<a href="https://www.luogu.com.cn/record/32764836" target="_blank" rel="noopener">Luogu P5706</a><br>同样是顺序结构题单的一题，话说我已经刷了这题单一半题了啊……</p>
-<p>基本的乘除问题，代码如下：</p>
-<pre class="line-numbers language-cpp" mdui-tooltip="{content: 'cpp'}"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h></span></span>
-<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
-
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
- <span class="token keyword">float</span> total<span class="token punctuation">;</span>
- <span class="token keyword">int</span> quantity<span class="token punctuation">;</span>
- <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%f"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>total<span class="token punctuation">)</span><span class="token punctuation">;</span>
- <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>quantity<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
- <span class="token comment" spellcheck="true">// compute cola of every student</span>
- <span class="token keyword">double</span> average <span class="token operator">=</span> total <span class="token operator">/</span> <span class="token punctuation">(</span><span class="token keyword">double</span><span class="token punctuation">)</span>quantity<span class="token punctuation">;</span>
-
- <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%.3f\n%d"</span><span class="token punctuation">,</span> average<span class="token punctuation">,</span> quantity <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
- <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>C++ O2编译环境下，最长耗时3ms，最大内存708.00KB，可放心食用。</p>
-
+          
         </section>
 
         
@@ -526,10 +503,10 @@
               
             </span>
             <br />
-            <span>本文永久链接：<a href="https://xuyang1638.github.io/2020/04/13/P5706%20%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/">https://xuyang1638.github.io/2020/04/13/P5706%20%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/</a></span>
+            <span>本文永久链接：<a href="https://xuyang1638.github.io/myfriends">https://xuyang1638.github.io/myfriends</a></span>
             
               <br />
-              <span>本文Markdown：<a href="https://xuyang1638.github.io/2020/04/13/P5706%20%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/P5706 刷题记录.md">https://xuyang1638.github.io/2020/04/13/P5706%20%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/P5706 刷题记录.md</a></span>
+              <span>本文Markdown：<a href="https://xuyang1638.github.io/myfriendsundefined.md">https://xuyang1638.github.io/myfriendsundefined.md</a></span>
             
           </section>
         
@@ -564,37 +541,6 @@
   <div class="theme-spacer"></div>
 
   
-
-  
-    <div class="theme-post__pagination mdui-color-theme">
-  
-    <div class="theme-post__pagination__prev mdui-ripple mdui-valign">
-      <a href="/2020/04/14/P1424%20%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/" class="theme-post__pagination__prev__content mdui-text-left">
-        <div>
-          <i class="mdui-icon material-icons mdui-text-center">&#xe5cb;</i>
-          <span class="mdui-typo-body-2-opacity mdui-text-center">新的文章</span>
-        </div>
-        <div class="mdui-typo-title mdui-text-truncate">
-          P1424 刷题记录
-        </div>
-      </a>
-    </div>
-  
-
-  
-    <div class="theme-post__pagination__next mdui-ripple mdui-valign">
-      <a href="/2020/04/13/P5713%20%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84%20%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/" class="theme-post__pagination__next__content mdui-text-right">
-        <div>
-          <span class="mdui-typo-body-2-opacity mdui-text-center">旧的文章</span>
-          <i class="mdui-icon material-icons mdui-text-center">&#xe5cc;</i>
-        </div>
-        <div class="mdui-typo-title mdui-text-truncate">
-          P5713 分支结构 刷题记录
-        </div>
-      </a>
-    </div>
-    
-</div>
 
   
 
@@ -701,7 +647,7 @@
 
 <script type="text/javascript">
   (function() {
-    var postLastModifiedDate = 1587262419185
+    var postLastModifiedDate = 1587302181041
     var today = (new Date()).getTime()
     var difference = Math.floor((today - postLastModifiedDate)/(24*60*60*1000))
     if (difference >= 100) {
@@ -737,6 +683,8 @@
     });
   }
 </script>
+
+
 
 
 
