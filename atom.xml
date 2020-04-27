@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Kozumi Blog</title>
+  
+  <subtitle>给时光以生命，给岁月以文明。</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://xuyang1638.github.io/"/>
+  <updated>2020-04-27T00:31:54.946Z</updated>
+  <id>https://xuyang1638.github.io/</id>
+  
+  <author>
+    <name>Kozumi</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>P5712 刷題記錄</title>
+    <link href="https://xuyang1638.github.io/2020/04/25/P5712%20%E5%88%B7%E9%A1%8C%E8%A8%98%E9%8C%84/"/>
+    <id>https://xuyang1638.github.io/2020/04/25/P5712%20%E5%88%B7%E9%A1%8C%E8%A8%98%E9%8C%84/</id>
+    <published>2020-04-24T16:00:00.000Z</published>
+    <updated>2020-04-27T00:31:54.946Z</updated>
+    
+    <content type="html"><![CDATA[<p>題面地址：<a href="https://www.luogu.com.cn/problem/P5712" target="_blank" rel="noopener">P5712</a><br>注意到蘋果數量有可能小於1，故分支邏輯判斷語句要寫成$quantity &lt;= 1$的形式。</p><p>完整代碼如下：（C++）</p><pre><code class="lang-cpp">#include &lt;stdio.h&gt;int main(){    int quantity;    scanf(&quot;%d&quot;, &amp;quantity);    if(quantity &lt;= 1)        printf(&quot;Today, I ate %d apple.&quot;, quantity);    if(quantity &gt; 1) {        printf(&quot;Today, I ate %d apples.&quot;, quantity);    }    return 0;}</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;題面地址：&lt;a href=&quot;https://www.luogu.com.cn/problem/P5712&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;P5712&lt;/a&gt;&lt;br&gt;注意到蘋果數量有可能小於1，故分支邏輯判斷語句要寫成$quantity &amp;lt
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>P5711 刷題記錄</title>
+    <link href="https://xuyang1638.github.io/2020/04/25/P5711%20%E5%88%B7%E9%A1%8C%E8%A8%98%E9%8C%84/"/>
+    <id>https://xuyang1638.github.io/2020/04/25/P5711%20%E5%88%B7%E9%A1%8C%E8%A8%98%E9%8C%84/</id>
+    <published>2020-04-24T16:00:00.000Z</published>
+    <updated>2020-04-27T00:31:54.945Z</updated>
+    
+    <content type="html"><![CDATA[<p>題面地址：<a href="https://www.luogu.com.cn/problem/P5711" target="_blank" rel="noopener">P5711</a><br>這道題目是分支結構題單練習中的一題，我們先來看看閏年的判定規律：</p><pre><code class="lang-plain">普通闰年:公历年份是4的倍数的，且不是100的倍数，为普通闰年。（如2004年就是闰年）；世纪闰年:公历年份是整百数的，必须是400的倍数才是世纪闰年（如1900年不是世纪闰年，2000年是世纪闰年）；（引用自[百度百科](https://baike.baidu.com/item/%E9%97%B0%E5%B9%B4/27098)）</code></pre><p>所以就很明確了，我們首先需要判斷這個年份是不是世紀年份，再根據是否是世紀年份，採用不同的規則來輸出結果。<br>先看看世紀年份的判斷吧：</p><pre><code class="lang-cpp">int year;scanf(&quot;%d&quot;, &amp;year);int whole_hundred = (year % 100 == 0);</code></pre><p>這樣就可判斷出是否是世紀年份了，根據取餘運算得到的餘數是否爲0就可以判斷是不是100的倍數。具體判斷只需要再寫個if分支再使用同樣方法判定就好了。</p><p>具體代碼如下：（C++）</p><pre><code class="lang-cpp">#include &lt;stdio.h&gt;int main() {    int year = 0;    scanf(&quot;%d&quot;, &amp;year);    int whole_hundred = (year % 100 == 0);    int leap = 0;    if(whole_hundred) leap = (year % 400 == 0);    if(!whole_hundred) leap = (year % 4 == 0);    printf(&quot;%d&quot;, leap);    return 0;}</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;題面地址：&lt;a href=&quot;https://www.luogu.com.cn/problem/P5711&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;P5711&lt;/a&gt;&lt;br&gt;這道題目是分支結構題單練習中的一題，我們先來看看閏年的判定規律：&lt;/p&gt;
+&lt;p
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>P5710 刷题记录</title>
+    <link href="https://xuyang1638.github.io/2020/04/24/P5710%20%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    <id>https://xuyang1638.github.io/2020/04/24/P5710%20%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/</id>
+    <published>2020-04-23T16:00:00.000Z</published>
+    <updated>2020-04-27T00:31:54.942Z</updated>
+    
+    <content type="html"><![CDATA[<p>题面地址：<a href="https://www.luogu.com.cn/problem/P5710" target="_blank" rel="noopener">P5710</a></p><p>这道题运用了逻辑门，可以用两个布尔变量表示两个性质是否成立。运用与或非逻辑运算符可以解决该题。<br>若bool a,b分别表示性质一和性质二，那么四个同学是否喜欢可以表示为如下的逻辑门形式：<br>a&amp;&amp;b: 小A Uim<br>a||b: Uim 八尾勇<br>!a&amp;&amp;!b: 正妹<br>所以使用if…else if分支分别判断再输出就可以了，代码如下（C++）：</p><pre><code class="lang-cpp">#include &lt;stdio.h&gt;int main() {    int x;    scanf(&quot;%d&quot;, &amp;x);    bool a,b;    a = (x % 2 == 0);    b = (x &gt; 4 &amp;&amp; x &lt;=12);    if(a &amp;&amp; b) printf(&quot;1 1 0 0&quot;);    else if(a || b) printf(&quot;0 1 1 0&quot;);    else if(!a &amp;&amp; !b) printf(&quot;0 0 0 1&quot;);    return 0;}</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;题面地址：&lt;a href=&quot;https://www.luogu.com.cn/problem/P5710&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;P5710&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这道题运用了逻辑门，可以用两个布尔变量表示两个性质是否成立。运用与或非
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>P2181 刷题记录</title>
+    <link href="https://xuyang1638.github.io/2020/04/23/P2181%20%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    <id>https://xuyang1638.github.io/2020/04/23/P2181%20%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/</id>
+    <published>2020-04-22T16:00:00.000Z</published>
+    <updated>2020-04-27T09:34:54.211Z</updated>
+    
+    <content type="html"><![CDATA[<p>傳統藝能：<a href="https://www.luogu.com.cn/problemnew/solution/P2181" target="_blank" rel="noopener">題面地址</a><br>剛開始感覺這題滿簡單的，應該能寫O(1)的算法，然而定睛一看題目感覺臉都腫了……<br>先說一下我寫這道題的思路吧，凸多邊形對角線交點數量參考了沈文德老師的論文[1]，發覺是一個排列組合問題，以我初中數學的知識顯然無法求解。求一個n個頂點的凸多邊形的對角線交點，採用公式$C(n-4, n)$求解。<br>百度得$C(r, n)=\frac{n!}{r!(n-r)!}$，遞歸一下套下公式，應該沒問題的……<br>代碼如下（C）:</p><pre><code class="lang-c">#include &lt;stdio.h&gt;int factorial(int n) {    int result;    if(n == 0 || n == 1) return 1;    else {        result = factorial(n);        return result;    }}int C(int n){    int r = n - 4;    int up = factorial(n);    int down = factorial(r) * factorial(n-r);    int result = up / down;    return result;}// C(r, n) = n!/[r!(n-r)!]// C(n-4, n)int main() {    int n;    scanf(&quot;%d&quot;, &amp;n);    int result = C(n);    printf(&quot;%d&quot;, result);    return 0;}</code></pre><p>但是，你以爲這就完了嗎？<br>不，並沒有。很顯然這個算法的時間複雜度是難以想象的大，在n=3時就已經爆炸了，不用說更大的情況了。於是厚顏無恥的看了題解，果然，O(1)的算法是存在的，佢佢還是佢佢。<br>大佬通過排列組合的技巧推得了關於n的公式，</p><script type="math/tex; mode=display">\frac\{n (n-1)\}\{\{2 (n-2)\}\div\{3(n-3)\}\div4\}</script><p>然後就不需要階乘了，直接輸出就好了。果然我就是菜啊:-)。<br>優化後的代碼如下：</p><pre><code class="lang-cpp">#include &lt;stdio.h&gt;unsigned long long n, ans;int main() {    scanf(&quot;%lld&quot;, &amp;n);    ans = n * (n - 1) / 2 * (n - 2) / 3 * (n - 3) / 4;    printf(&quot;%lld\n&quot;, ans);    return 0;}</code></pre><p>最後放上兩種方法的測試結果（慘）：<br><img src="https://images.cnblogs.com/cnblogs_com/kozumi/1730575/o_200423055514tle.PNG" alt="第一種（自己）"><br><img src="https://images.cnblogs.com/cnblogs_com/kozumi/1730575/o_200423055524ac.PNG" alt="第二種（大佬）"></p><p>參考文獻：<br>[1] 一个计算凸多边形对角线交点的方法[J]沈文德.蘇州教育學院學報.1996<br>[2] <a href="https://www.luogu.com.cn/blog/user47136/solution-p2181" target="_blank" rel="noopener">ww3113306 P2181題解 包括公式推導過程</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;傳統藝能：&lt;a href=&quot;https://www.luogu.com.cn/problemnew/solution/P2181&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題面地址&lt;/a&gt;&lt;br&gt;剛開始感覺這題滿簡單的，應該能寫O(1)的算法，然而定睛
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>P5709 刷題記錄</title>
+    <link href="https://xuyang1638.github.io/2020/04/23/P5709%20%E5%88%B7%E9%A1%8C%E8%A8%98%E9%8C%84/"/>
+    <id>https://xuyang1638.github.io/2020/04/23/P5709%20%E5%88%B7%E9%A1%8C%E8%A8%98%E9%8C%84/</id>
+    <published>2020-04-22T16:00:00.000Z</published>
+    <updated>2020-04-27T00:31:54.942Z</updated>
+    
+    <content type="html"><![CDATA[<p>題面地址：<a href="https://www.luogu.com.cn/problem/P5709" target="_blank" rel="noopener">P5709</a><br>吃蘋果。取近似數的時候要注意，應該使用加一法，還有要注意類型判定，可以使用$\frac{(double)x}{(int)x}=1$來判斷是不是整數，如果存在小數部份則加一，因爲題目要求的是完整地蘋果數量，咬過一口的當然不能算:)<br>代碼如下（C語言）：</p><pre><code class="lang-c">#include &lt;stdio.h&gt;int get_int(double x) {    if(x / (int)x != 1) return x+1;    if(x / (int)x == 1) return x;}int main() {    int m, t, s;    scanf(&quot;%d%d%d&quot;, &amp;m, &amp;t, &amp;s);    int ate_quantity = get_int((double)s / t);    if(ate_quantity &gt;= m) printf(&quot;0&quot;);    else printf(&quot;%d&quot;, m - ate_quantity);    return 0;}</code></pre><p>到今天，終於把洛谷的入門1題單刷完了，真的長見識了，原來我AC信競題的概率和做對數學題的概率差不多，都是50%左右:)</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;題面地址：&lt;a href=&quot;https://www.luogu.com.cn/problem/P5709&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;P5709&lt;/a&gt;&lt;br&gt;吃蘋果。取近似數的時候要注意，應該使用加一法，還有要注意類型判定，可以使用$\
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>P1421 刷題記錄</title>
+    <link href="https://xuyang1638.github.io/2020/04/19/P1421%20%E5%88%B7%E9%A1%8C%E8%A8%98%E9%8C%84/"/>
+    <id>https://xuyang1638.github.io/2020/04/19/P1421%20%E5%88%B7%E9%A1%8C%E8%A8%98%E9%8C%84/</id>
+    <published>2020-04-18T16:00:00.000Z</published>
+    <updated>2020-04-27T00:31:54.936Z</updated>
+    
+    <content type="html"><![CDATA[<p>&lt;經典吟唱&gt;這道題目是洛谷順序結構題單中的一題，題面地址:<a href="https://www.luogu.com.cn/problem/P1421" target="_blank" rel="noopener">P1421</a><br>這道題沒有什麼好說的地方，主要的思路是分別讀出整數部分和小數部份，再使用公式 $Total = a + 0.1\times b$ 計算組合後的總錢數，再使用總錢數除以1.9元，就能得到能買的鉛筆數量$Quantity$了。<br>代碼如下（使用C語言編寫，果然我還是不會C++……）：</p><pre><code class="lang-c">#include &lt;stdio.h&gt;#include &lt;math.h&gt;int main() {    int a,b;    scanf(&quot;%d%d&quot;, &amp;a, &amp;b);    double total = a + (b * 0.1);    int quantity = (int)(total / 1.9);    printf(&quot;%d&quot;, quantity);    return 0;}</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&amp;lt;經典吟唱&amp;gt;這道題目是洛谷順序結構題單中的一題，題面地址:&lt;a href=&quot;https://www.luogu.com.cn/problem/P1421&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;P1421&lt;/a&gt;&lt;br&gt;這道題沒有什麼好說
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>P5708 刷題記錄</title>
+    <link href="https://xuyang1638.github.io/2020/04/19/P5708%20%E5%88%B7%E9%A1%8C%E8%A8%98%E9%8C%84/"/>
+    <id>https://xuyang1638.github.io/2020/04/19/P5708%20%E5%88%B7%E9%A1%8C%E8%A8%98%E9%8C%84/</id>
+    <published>2020-04-18T16:00:00.000Z</published>
+    <updated>2020-04-27T00:31:54.941Z</updated>
+    
+    <content type="html"><![CDATA[<p>這道題還是洛谷順序結構題單中一題，需要注意的是，在本題中，abc三個變量的輸入輸出方式。<br>我在做這道題的時候，第一次三個點爆了WA，看了一下代碼，發現是double型變量使用了%f輸入，導致三個變量的值都是0，所以這個要注意一下。<br>解決方案有：三個變量都採用float型，或者採用%lf輸入。<br>代碼如下：</p><pre><code class="lang-cpp">#include &lt;stdio.h&gt;#include &lt;math.h&gt;int main() {    double a,b,c;    scanf(&quot;%lf&quot;, &amp;a);    scanf(&quot;%lf&quot;, &amp;b);    scanf(&quot;%lf&quot;, &amp;c);    double p = 0.5 * (a + b + c);    double S = sqrt(p*(p-a)*(p-b)*(p-c));    printf(&quot;%.1f\n&quot;, S);    return 0;}</code></pre><p>其實這道題目就是對「海倫公式」的應用，之前沒有聽說過這個公式，做完題後順手百度了一下，發現可以通過秦九韶公式推出，還是滿神奇的:)</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;這道題還是洛谷順序結構題單中一題，需要注意的是，在本題中，abc三個變量的輸入輸出方式。&lt;br&gt;我在做這道題的時候，第一次三個點爆了WA，看了一下代碼，發現是double型變量使用了%f輸入，導致三個變量的值都是0，所以這個要注意一下。&lt;br&gt;解決方案有：三個變量都採用fl
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>P2433 刷題記錄</title>
+    <link href="https://xuyang1638.github.io/2020/04/18/P2433%20%E5%88%B7%E9%A1%8C%E8%A8%98%E9%8C%84/"/>
+    <id>https://xuyang1638.github.io/2020/04/18/P2433%20%E5%88%B7%E9%A1%8C%E8%A8%98%E9%8C%84/</id>
+    <published>2020-04-17T16:00:00.000Z</published>
+    <updated>2020-04-27T00:31:54.938Z</updated>
+    
+    <content type="html"><![CDATA[<p>這是洛谷順序結構題單中的一題，雖然說是小學數學，但是很多地方明明是奧數水平啊喂，這樣真的大丈夫嘛……<br>注意：本題對答案結構判定比較玄學，有的地方使用cout，有的地方需要使用printf，當然也有可能是我的水平太低:)<br>所以今天做這道題的時候WA了4次:(<br><img src="https://images.cnblogs.com/cnblogs_com/kozumi/1730575/o_200418124344P2433%E7%88%AC.png" alt="P2433搞快點爬"><br>所以如果要看答案/題解，請務必注意輸出方式：</p><pre><code class="lang-cpp">#include &lt;iostream&gt;#include &lt;cmath&gt;#include &lt;cstdio&gt;using namespace std;int main() {    int T;    cin &gt;&gt; T;    if (T == 1) {        printf(&quot;I love Luogu!&quot;);    } else if (T == 2) {        printf(&quot;6 4&quot;);    } else if (T == 3) {        printf(&quot;3\n12\n2&quot;);    } else if (T == 4) {        printf(&quot;166.667&quot;);    } else if (T == 5) {        printf(&quot;15&quot;);    } else if (T == 6) {        cout&lt;&lt;sqrt(6*6+9*9)&lt;&lt;endl;    } else if (T == 7) {        printf(&quot;110\n90\n0\n&quot;);    } else if (T == 8) {        const double pi = 3.141593;        const double r = 5;        cout&lt;&lt;pi*r*2&lt;&lt;endl&lt;&lt;pi*r*r&lt;&lt;endl&lt;&lt;4.0/3*pi*r*r*r&lt;&lt;endl;    } else if (T == 9) {        printf(&quot;%d&quot;, 22);    } else if (T == 10) {        cout &lt;&lt; 9;    } else if (T == 11) {        cout &lt;&lt; 1.0 * 100 / 3;    } else if (T == 12) {        cout &lt;&lt; 13 &lt;&lt; &quot;\n&quot; &lt;&lt; &quot;R&quot;;    } else if (T == 13) {        const double pi = 3.1415923;        int result = (int)pow(4456.872276266667, 1.0/3);        printf(&quot;%d&quot;, result);    } else if (T == 14) {        cout &lt;&lt; 50;    }    return 0;}</code></pre><p>PS：「因爲最近在用中州韻輸入法就直接寫繁體好了，請不用在意」</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;這是洛谷順序結構題單中的一題，雖然說是小學數學，但是很多地方明明是奧數水平啊喂，這樣真的大丈夫嘛……&lt;br&gt;注意：本題對答案結構判定比較玄學，有的地方使用cout，有的地方需要使用printf，當然也有可能是我的水平太低:)&lt;br&gt;所以今天做這道題的時候WA了4次:(&lt;br
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>P1424 刷题记录</title>
+    <link href="https://xuyang1638.github.io/2020/04/14/P1424%20%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    <id>https://xuyang1638.github.io/2020/04/14/P1424%20%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/</id>
+    <published>2020-04-13T16:00:00.000Z</published>
+    <updated>2020-04-27T00:31:54.937Z</updated>
+    
+    <content type="html"><![CDATA[<p>本题是洛谷顺序结构题单的一题，题面地址：<a href="https://www.luogu.com.cn/problem/P1425" target="_blank" rel="noopener">Luogu P1475</a><br>这道题我是采用的先获取以分钟为单位的总时间，然后再用除法和取余运算获得具体的时间。</p><script type="math/tex; mode=display">Start = a * 60 + b\\End = c * 60 + d\\All = End - Start\\Hours = \frac{All}{60}\\Minutes = All\bmod 60</script><p>代码如下（C++ O2）：</p><pre><code class="lang-cpp">#include &lt;stdio.h&gt;int main(){ int a, b, c, d; scanf(&quot;%d%d%d%d&quot;, &amp;a, &amp;b, &amp;c, &amp;d); int swimming_alltime = (c * 60 + d) - (a * 60 + b); int swimming_hours = swimming_alltime / 60; int swimming_minutes = swimming_alltime % 60; printf(&quot;%d %d\n&quot;, swimming_hours, swimming_minutes); return 0;}</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;本题是洛谷顺序结构题单的一题，题面地址：&lt;a href=&quot;https://www.luogu.com.cn/problem/P1425&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Luogu P1475&lt;/a&gt;&lt;br&gt;这道题我是采用的先获取以分钟为单位的
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>P5706 刷题记录</title>
+    <link href="https://xuyang1638.github.io/2020/04/13/P5706%20%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    <id>https://xuyang1638.github.io/2020/04/13/P5706%20%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/</id>
+    <published>2020-04-12T16:00:00.000Z</published>
+    <updated>2020-04-27T00:31:54.940Z</updated>
+    
+    <content type="html"><![CDATA[<p>题目地址：<a href="https://www.luogu.com.cn/record/32764836" target="_blank" rel="noopener">Luogu P5706</a><br>同样是顺序结构题单的一题，话说我已经刷了这题单一半题了啊……</p><p>基本的乘除问题，代码如下：</p><pre><code class="lang-cpp">#include &lt;stdlib.h&gt;#include &lt;stdio.h&gt;int main(){ float total; int quantity; scanf(&quot;%f&quot;, &amp;total); scanf(&quot;%d&quot;, &amp;quantity); // compute cola of every student double average = total / (double)quantity; printf(&quot;%.3f\n%d&quot;, average, quantity * 2); return 0;}</code></pre><p>C++ O2编译环境下，最长耗时3ms，最大内存708.00KB，可放心食用。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;题目地址：&lt;a href=&quot;https://www.luogu.com.cn/record/32764836&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Luogu P5706&lt;/a&gt;&lt;br&gt;同样是顺序结构题单的一题，话说我已经刷了这题单一半题了啊……&lt;
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>P5713 分支结构 刷题记录</title>
+    <link href="https://xuyang1638.github.io/2020/04/13/P5713%20%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84%20%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    <id>https://xuyang1638.github.io/2020/04/13/P5713%20%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84%20%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/</id>
+    <published>2020-04-12T16:00:00.000Z</published>
+    <updated>2020-04-27T00:31:54.949Z</updated>
+    
+    <content type="html"><![CDATA[<p>这题是分支结构题单的一题，<a href="https://www.luogu.com.cn/problem/P5713" target="_blank" rel="noopener">题面地址</a></p><p>本来是想了一下要不要算完两个方式再比较大小，但是发现可以直接手算解决问题，那就列了个方程。</p><script type="math/tex; mode=display">\begin{cases}y_1=5x,\\y_2=3x+11\end{cases}</script><p>联立方程组，解得x=5.5。故当x小于5.5时，Local较快；x大于5.5时，Luogu较快。</p><p>代码如下：</p><pre><code class="lang-cpp">#include &lt;stdio.h&gt;int main(){ int n; scanf(&quot;%d&quot;, &amp;n); if (n &lt; 5.5) printf(&quot;Local&quot;); if (n &gt; 5.5) printf(&quot;Luogu&quot;); return 0;}</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;这题是分支结构题单的一题，&lt;a href=&quot;https://www.luogu.com.cn/problem/P5713&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;题面地址&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;本来是想了一下要不要算完两个方式再比较大小，但是发现可以
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>P5704 刷题记录</title>
+    <link href="https://xuyang1638.github.io/2020/04/11/P5704%20%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    <id>https://xuyang1638.github.io/2020/04/11/P5704%20%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/</id>
+    <published>2020-04-10T16:00:00.000Z</published>
+    <updated>2020-04-27T00:31:54.939Z</updated>
+    
+    <content type="html"><![CDATA[<p>题目地址：<a href="https://www.luogu.com.cn/problem/P5704" target="_blank" rel="noopener">https://www.luogu.com.cn/problem/P5704</a><br>这是洛谷官方顺序结构题单中的一题，可利用ASCII码解题。<br>代码如下：</p><pre><code class="lang-cpp">#include &lt;stdio.h&gt;int main() {    char a;    char b;    scanf(&quot;%c&quot;, &amp;a);    b = a - 32;    printf(&quot;%c&quot;, b);    return 0;}</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;题目地址：&lt;a href=&quot;https://www.luogu.com.cn/problem/P5704&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.luogu.com.cn/problem/P5704&lt;/a&gt;&lt;br&gt;这是洛谷官方
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>P5705 刷题记录</title>
+    <link href="https://xuyang1638.github.io/2020/04/11/P5705%20%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    <id>https://xuyang1638.github.io/2020/04/11/P5705%20%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/</id>
+    <published>2020-04-10T16:00:00.000Z</published>
+    <updated>2020-04-27T00:31:54.940Z</updated>
+    
+    <content type="html"><![CDATA[<p>题目地址：<a href="https://www.luogu.com.cn/problem/P5705" target="_blank" rel="noopener">https://www.luogu.com.cn/problem/P5705</a><br>这是洛谷官方顺序结构题单中的一题，可以使用字符串翻转知识求解。<br>代码如下（C++ O2）：</p><pre><code class="lang-cpp">#include &lt;stdio.h&gt;int main() {    char input[5];    char output[5];    scanf(&quot;%s&quot;, input);    for(int i = 0; i &lt; 5; i++) {        output[4-i] = input[i];    }    printf(&quot;%s&quot;, output);    return 0;}</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;题目地址：&lt;a href=&quot;https://www.luogu.com.cn/problem/P5705&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.luogu.com.cn/problem/P5705&lt;/a&gt;&lt;br&gt;这是洛谷官方
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>P5703 刷题记录</title>
+    <link href="https://xuyang1638.github.io/2020/04/09/P5703%20%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    <id>https://xuyang1638.github.io/2020/04/09/P5703%20%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/</id>
+    <published>2020-04-08T16:00:00.000Z</published>
+    <updated>2020-04-27T00:31:54.939Z</updated>
+    
+    <content type="html"><![CDATA[<p>该题是洛谷题单Training 100顺序结构中的第三题，没有很大难度。但需要注意的一点是，输入输出的变量需要使用long long类型，不然会爆内存（注意题目给出的a,b &lt; 10^9的限制)。在Windows mingw32编译环境下，输入输出应使用%l64d；而洛谷的评测机是Linux gcc/g++环境，所以上传的评测代码中应该使用%lld输入输出。</p><p>代码如下：</p><pre><code class="lang-cpp">#include &lt;stdio.h&gt;int main(void) {    unsigned long long int a = 0;    unsigned long long int b = 0;    scanf(&quot;%lld&quot;, &amp;a);    scanf(&quot;%lld&quot;, &amp;b);    unsigned long long int sum = a * b;    printf(&quot;%lld\n&quot;, sum);    return 0;}</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;该题是洛谷题单Training 100顺序结构中的第三题，没有很大难度。但需要注意的一点是，输入输出的变量需要使用long long类型，不然会爆内存（注意题目给出的a,b &amp;lt; 10^9的限制)。在Windows mingw32编译环境下，输入输出应使用%l64d；而
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>UVa1586 Molar Mass 解题记录</title>
+    <link href="https://xuyang1638.github.io/2020/04/01/UVa1586%20Molar%20Mass%20%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    <id>https://xuyang1638.github.io/2020/04/01/UVa1586%20Molar%20Mass%20%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/</id>
+    <published>2020-03-31T16:00:00.000Z</published>
+    <updated>2020-04-27T00:31:54.952Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://onlinejudge.org/external/15/1586.pdf" target="_blank" rel="noopener">题面pdf地址</a><br><a href="https://www.luogu.com.cn/problem/UVA1586" target="_blank" rel="noopener">洛谷题面地址</a></p><p>Update: 2020/4/1 00:28<br>肝了20多分钟，撑不住了…先睡觉去，写了一半算法。明天起床再调。<br>话说为什么这题是普及-啊，感觉自己方法出问题…</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://onlinejudge.org/external/15/1586.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;题面pdf地址&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.luogu.com.cn/pr
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>LOJ#3 Copycat 题解</title>
+    <link href="https://xuyang1638.github.io/2020/04/01/LOJ#3%20Copycat%20%E9%A2%98%E8%A7%A3/"/>
+    <id>https://xuyang1638.github.io/2020/04/01/LOJ#3%20Copycat%20%E9%A2%98%E8%A7%A3/</id>
+    <published>2020-03-31T16:00:00.000Z</published>
+    <updated>2020-04-27T00:31:54.934Z</updated>
+    
+    <content type="html"><![CDATA[<p>代码如下：（提交时请使用C++(NOI)编译）</p><pre><code class="lang-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int main() {    freopen(&quot;copycat.in&quot;, &quot;r&quot;, stdin);    freopen(&quot;copycat.out&quot;, &quot;w&quot;, stdout);    int quantity;    cin &gt;&gt; quantity;    string a;    for (int i = 1; i &lt;= quantity; i++) {        cin &gt;&gt; a;        cout &lt;&lt; a &lt;&lt; endl;    }    return 0;}</code></pre><p>记录一下我写这道题的过程吧，说来真是话长。<br>本来这道题是loj的第三题，纯测试文件读写用的。然后我看题的时候，题面有一句“请注意使用文件输入输出，而非标准输入输出。”，导致我一直在使用fin及fout读写，使用的int以及long long在第九个点都爆了内存。调了很久，在本机上样例运行正常，但是上了测试机之后莫名其妙的就wa，一分都没有。<br>实在懵逼，于是去看了下别人写的题解，入眼就是一个freopen，原本以为控制台流重定向不能用的说…<br>于是改成这样了，读入的变量要采用string类型，因为第三个子任务的数据量是&lt;=10^1000的，用long long都会爆内存。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;代码如下：（提交时请使用C++(NOI)编译）&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-cpp&quot;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+int main() {
+    freopen(&amp;quo
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>UVa1585 Score 题解</title>
+    <link href="https://xuyang1638.github.io/2020/03/31/UVa1585%20Score%20%E9%A2%98%E8%A7%A3/"/>
+    <id>https://xuyang1638.github.io/2020/03/31/UVa1585%20Score%20%E9%A2%98%E8%A7%A3/</id>
+    <published>2020-03-30T16:00:00.000Z</published>
+    <updated>2020-04-27T00:31:54.951Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://onlinejudge.org/external/15/1585.pdf" target="_blank" rel="noopener">UVa1585 题目原地址</a></p><p>本体思路重点在于分数的统计及重置。<br>由题面可得输入的是一个小于80个字符的字符串，故使用一个字符数组存储。</p><p>更新 2020/3/1 11:52<br>傻了，uva评测太慢代码挂上就先去摸鱼，结果一看wa了。看了下代码，只写了主功能函数。给定的输入有多个kase…<br>代码更新如下（ifdef内的是调试代码，可去掉）：</p><pre><code class="lang-cpp">#include &lt;stdio.h&gt;#include &lt;cstdlib&gt;int getScore() { int quantity = 0; int score = 0; char inputs[80] = {}; scanf(&quot;%s&quot;, inputs); #ifdef DEBUG printf(&quot;Current string: %s\n&quot;, inputs); #endif for(int i = 0; i &lt;= 80; i++){  if(inputs[i] == &#39;O&#39;) {   quantity++;   score += quantity;   #ifdef DEBUG   printf(&quot;Current quantity of O: %d\n&quot;, quantity);   printf(&quot;Score: %d\n\n&quot;, score);   #endif  }  if(inputs[i] == &#39;X&#39;) {   quantity = 0;   #ifdef DEBUG   printf(&quot;Current character is X.\n&quot;);   printf(&quot;Score: %d\n\n&quot;, score);   #endif  } } return score;}int main(void){ #ifdef DEBUG freopen(&quot;data.in&quot;, &quot;r&quot;, stdin); #endif int *scores; int kase_quantity = 0; scanf(&quot;%d&quot;, &amp;kase_quantity); // create a array to save scores of each kase scores = (int*)calloc(kase_quantity, sizeof(int)); for(int i = 0; i &lt;= kase_quantity; i++) {  int score = getScore();  scores[i] = score; } for(int i = 0; i &lt; kase_quantity; i++) {  printf(&quot;%d\n&quot;, scores[i]); } // free memory used by scores array free(scores); return 0;}</code></pre><p>废话不多说，代码如下：</p><pre><code class="lang-cpp">#include &lt;stdio.h&gt;int main(void){ char inputs[80]; int quantity = 1; int score; scanf(&quot;%s&quot;, inputs); for(int i = 0; i &lt;= 80; i++){  if(inputs[i] == &#39;O&#39;) {   score += quantity;   quantity++;  }  if(inputs[i] == &#39;X&#39;) {   quantity = 1;  } } printf(&quot;%d\n&quot;, score); return 0;}</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://onlinejudge.org/external/15/1585.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;UVa1585 题目原地址&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;本体思路重点在于分数的统计及重置。&lt;br&gt;由题面可得
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://xuyang1638.github.io/2020/03/12/hello-world/"/>
+    <id>https://xuyang1638.github.io/2020/03/12/hello-world/</id>
+    <published>2020-03-12T08:14:35.473Z</published>
+    <updated>2020-03-12T08:14:35.473Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
