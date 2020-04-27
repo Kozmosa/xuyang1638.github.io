@@ -328,28 +328,6 @@
   </entry>
   
   <entry>
-    <title>UVa1586 Molar Mass 解题记录</title>
-    <link href="https://xuyang1638.github.io/2020/04/01/UVa1586%20Molar%20Mass%20%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
-    <id>https://xuyang1638.github.io/2020/04/01/UVa1586%20Molar%20Mass%20%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/</id>
-    <published>2020-03-31T16:00:00.000Z</published>
-    <updated>2020-04-27T00:31:54.952Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://onlinejudge.org/external/15/1586.pdf" target="_blank" rel="noopener">题面pdf地址</a><br><a href="https://www.luogu.com.cn/problem/UVA1586" target="_blank" rel="noopener">洛谷题面地址</a></p><p>Update: 2020/4/1 00:28<br>肝了20多分钟，撑不住了…先睡觉去，写了一半算法。明天起床再调。<br>话说为什么这题是普及-啊，感觉自己方法出问题…</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://onlinejudge.org/external/15/1586.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;题面pdf地址&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.luogu.com.cn/pr
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>LOJ#3 Copycat 题解</title>
     <link href="https://xuyang1638.github.io/2020/04/01/LOJ#3%20Copycat%20%E9%A2%98%E8%A7%A3/"/>
     <id>https://xuyang1638.github.io/2020/04/01/LOJ#3%20Copycat%20%E9%A2%98%E8%A7%A3/</id>
@@ -367,6 +345,28 @@
 using namespace std;
 int main() {
     freopen(&amp;quo
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>UVa1586 Molar Mass 解题记录</title>
+    <link href="https://xuyang1638.github.io/2020/04/01/UVa1586%20Molar%20Mass%20%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    <id>https://xuyang1638.github.io/2020/04/01/UVa1586%20Molar%20Mass%20%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/</id>
+    <published>2020-03-31T16:00:00.000Z</published>
+    <updated>2020-04-27T00:31:54.952Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://onlinejudge.org/external/15/1586.pdf" target="_blank" rel="noopener">题面pdf地址</a><br><a href="https://www.luogu.com.cn/problem/UVA1586" target="_blank" rel="noopener">洛谷题面地址</a></p><p>Update: 2020/4/1 00:28<br>肝了20多分钟，撑不住了…先睡觉去，写了一半算法。明天起床再调。<br>话说为什么这题是普及-啊，感觉自己方法出问题…</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://onlinejudge.org/external/15/1586.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;题面pdf地址&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.luogu.com.cn/pr
       
     
     </summary>
@@ -405,7 +405,7 @@ int main() {
     <published>2020-03-12T08:14:35.473Z</published>
     <updated>2020-03-12T08:14:35.473Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="lang-bash">$ hexo new &quot;My New Post&quot;</code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="lang-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="lang-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="lang-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
     
     <summary type="html">
     
