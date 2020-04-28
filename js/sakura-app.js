@@ -45,19 +45,21 @@ mashiro_global.ini = new function () {
     }
     $(function () {
       function waveloop1 () {
-        $('#banner_wave_1').css({
-          'left': '-236px'
-        }).animate({
-          'left': '-1233px'
-        }, 25000, 'linear', waveloop1)
+        // $('#banner_wave_1').css({
+        //   'left': '-236px'
+        // }).animate({
+        //   'left': '-1233px'
+        // }, 25000, 'linear', waveloop1)
+        console.log("waveloop1 blocked")
       }
 
       function waveloop2 () {
-        $('#banner_wave_2').css({
-          'left': '0px'
-        }).animate({
-          'left': '-1009px'
-        }, 60000, 'linear', waveloop2)
+        // $('#banner_wave_2').css({
+        //   'left': '0px'
+        // }).animate({
+        //   'left': '-1009px'
+        // }, 60000, 'linear', waveloop2)
+        console.log("waveloop2 blocked")
       }
       if (screen && screen.width > 860) {
         waveloop1()
